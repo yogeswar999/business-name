@@ -192,7 +192,7 @@ def generate_names():
         logger.error(f"Error generating names: {str(e)}")
         return jsonify({'error': 'Failed to generate names'}), 500
 
-@app.route('/health')
+@app.route('/healthz')
 def health_check():
     """Health check endpoint"""
     return jsonify({'status': 'healthy', 'timestamp': datetime.now().isoformat()})
